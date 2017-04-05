@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>What Are You?</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="vendors-v1.css"> -->
+<link rel="stylesheet" href="gns-quiz.css">
+</head>
+<body>
+
+<h1 style="font-size: 36px;"><center>Geek Nerd Suit Quiz</center></h1>
+
+ <div class="col-md-12 gns-quiz">
+ 
+         <div class="progress-wrapper">
+            <div class="progress-tick">0%</div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar">
+                </div>
+            </div>
+        </div>
+
+			<form method="POST" action="" accept-charset="UTF-8" id="quiz-form">
+
+                <div class="question-wrapper set1">
+                <div class="statement">
+                    How well do these traits describe you? 
+					<div class="question-subtitle">					
+					1 = Not at all and 5 = Extremely well
+					</div>
+                </div>
+                <div class="row decision">
+                	<div class="hidden-xs col-sm-1 caption left"></div>
+                	<div class="col-sm-2 caption left"></div>
+                	<div class="col-xs-12 col-sm-8 options">
+    	     			<label>1</label>
+        	 			<label>2</label>
+						<label>3</label>
+						<label>4</label>
+						<label>5</label>
+					</div>
+					<div class="hidden-xs col-sm-1 caption right"></div>
+         		</div>
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Analytical</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(1, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(1, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(1, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(1, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(1, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+            <div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Detailed</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(2, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(2, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(2, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(2, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(2, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>         
+            <div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Inventive</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(3, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(3, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(3, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(3, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(3, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+			<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Methodical</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(4, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(4, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(4, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(4, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(4, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+       		<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Persuasive</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(5, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(5, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(5, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(5, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(5, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+       		<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Strategic</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(6, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(6, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(6, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(6, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(6, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>            
+       		<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Technical</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(7, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(7, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(7, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(7, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(7, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>   
+       		<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Trouble shooter</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(8, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(8, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(8, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(8, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(8, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>   
+       		<div class="question-wrapper set1">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Visionary</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(9, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(9, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(9, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(9, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(9, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>   
+                   
+             <div class="question-wrapper set2">
+                <div class="statement">
+                	How well do these personas describe you?
+					<div class="question-subtitle">					
+					1 = Not at all and 5 = Extremely well
+					</div>
+                </div>
+                <div class="row decision">
+                	<div class="hidden-xs col-sm-1 caption left"></div>
+                	<div class="col-sm-2 caption left"></div>
+                	<div class="col-xs-12 col-sm-8 options">
+    	     			<label>1</label>
+        	 			<label>2</label>
+						<label>3</label>
+						<label>4</label>
+						<label>5</label>
+					</div>
+					<div class="hidden-xs col-sm-1 caption right"></div>
+         		</div>
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Activator</b><br>You like to get stuff done</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(10, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(10, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(10, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(10, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(10, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>                              
+            <div class="question-wrapper set2">
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Analyzer</b><br>You like to look for patterns</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(11, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(11, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(11, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(11, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(11, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>        
+            <div class="question-wrapper set2">
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Architect</b><br>You like to design things</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(12, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(12, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(12, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(12, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(12, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>  
+            <div class="question-wrapper set2">
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Builder</b><br>You like to build stuff</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(13, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(13, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(13, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(13, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(13, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+            <div class="question-wrapper set2">
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Explorer</b><br>You like adventures</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(14, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(14, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(14, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(14, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(14, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+            <div class="question-wrapper set2">
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left"><b>Storyteller</b><br>You like to tell stories</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(15, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(15, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(15, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(15, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(15, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>      
+            
+            <div class="question-wrapper set3">
+            <div class="statement">
+            	When trying to persuade others of your position, are you most likely to…?
+            </div>
+            <div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question16' id='question16_1' onclick="setAnswer(16, N, 5);" /> 
+	                		<label for='question16_1'>Provide data that justifies your point of view</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question16' id='question16_2' onclick="setAnswer(16, S, 5);" /> 
+	                		<label for='question16_2'>Create excitement about an idea to win others over</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question16' id='question16_3' onclick="setAnswer(16, G, 5);" /> 
+	                		<label for='question16_3'>Provide a vision for how to execute it with current systems and tools</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question16' id='question16_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div> 
+                                                                                                           
+            <div class="question-wrapper set4">
+            <div class="statement">
+            	When faced with making a business decision, are you most likely to consider…?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question17' id='question17_1' onclick="setAnswer(17, G, 5);" /> 
+	                		<label for='question17_1'>The abilities and constraints of your current systems and tools</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question17' id='question17_2' onclick="setAnswer(17, N, 5);" /> 
+	                		<label for='question17_2'>The knowledge you have about customer behavior and attitudes</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question17' id='question17_3' onclick="setAnswer(17, S, 5);" /> 
+	                		<label for='question17_3'>How things will change as a result of that decision</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question17' id='question17_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div> 
+            
+            <div class="question-wrapper set5">
+            <div class="statement">
+            	In meetings, which one of the following best describes you?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question18' id='question18_1' onclick="setAnswer(18, S, 5);" /> 
+	                		<label for='question18_1'>You typically raise multiple points of view and new alternatives for the group to consider</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question18' id='question18_2' onclick="setAnswer(18, N, 5);" /> 
+	                		<label for='question18_2'>You represent the voice of the customer and what their needs are</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question18' id='question18_3' onclick="setAnswer(18, G, 5);" /> 
+	                		<label for='question18_3'>You ground the group in the systems and tools that are needed to get it done</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question18' id='question18_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div> 
+                    
+                <div class="question-wrapper set6">
+                <div class="statement">
+                    How much do you enjoy doing the following?
+					<p style="font-size: 12px;">					
+					1 = I would never do this, 3 = I don’t mind doing it occasionally, 5 = I would do this all the time if I could
+					</p>
+                </div>
+                <div class="row decision">
+                	<div class="hidden-xs col-sm-1 caption left"></div>
+                	<div class="col-sm-2 caption left"></div>
+                	<div class="col-xs-12 col-sm-8 options">
+    	     			<label>1</label>
+        	 			<label>2</label>
+						<label>3</label>
+						<label>4</label>
+						<label>5</label>
+					</div>
+					<div class="hidden-xs col-sm-1 caption right"></div>
+         		</div>
+                <div class="row decision">
+                    <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Analytics</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(19, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(19, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(19, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(19, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(19, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+            <div class="question-wrapper set6">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Building strategic plans</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(20, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(20, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(20, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(20, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(20, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>         
+            <div class="question-wrapper set6">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Data architecture</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(21, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(21, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(21, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(21, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(21, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+			<div class="question-wrapper set6">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Giving presentations</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(22, S, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(22, S, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(22, S, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(22, S, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(22, S, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+       		<div class="question-wrapper set6">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Marketing technology</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(23, G, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(23, G, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(23, G, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(23, G, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(23, G, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div>
+       		<div class="question-wrapper set6">
+        	<div class="row decision">
+	                <div class="hidden-xs col-sm-1 caption left"></div>
+	                <div class="col-sm-2 caption left">Research</div>
+                    <div class="col-xs-12 col-sm-8 options btn-group" data-toggle="buttons" role="group" aria-label="Options">
+                        <label class="btn btn-default option agree one" onclick="setAnswer(24, N, 1);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree two" onclick="setAnswer(24, N, 2);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree three" onclick="setAnswer(24, N, 3);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree four" onclick="setAnswer(24, N, 4);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                        <label class="btn btn-default option agree five" onclick="setAnswer(24, N, 5);">
+                            <input type="radio" name="options" autocomplete="off">
+                        </label>
+                    </div>
+                    <div class="hidden-xs col-sm-1 caption right"></div>
+                </div>
+            </div> 
+            
+            <div class="question-wrapper set7">
+            <div class="statement">
+            	Given a choice, would you rather…?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question25' id='question25_1' onclick="setAnswer(25, S, 5);" /> 
+	                		<label for='question25_1'>Create a marketing campaign</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question25' id='question25_2' onclick="setAnswer(25, N, 5);" /> 
+	                		<label for='question25_2'>Build a predictive model</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question25' id='question25_3' onclick="setAnswer(25, G, 5);" /> 
+	                		<label for='question25_3'>Implement technology</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question25' id='question25_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div>     
+                    
+            <div class="question-wrapper set8">
+            <div class="statement">
+            	Which of the following functional areas do you work in? 
+            	<div class="question-subtitle">
+            	If your functional area is not listed, select the one that is closest to your department.
+            	</div>
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_1' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_1'>Accounting</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_2' onclick="setAnswer(26, N, 5);" /> 
+	                		<label for='question26_2'>Analytics / Data Science</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_3' onclick="setAnswer(26, G, 5);" /> 
+	                		<label for='question26_3'>Computer Science / Computer Engineering</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_4' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_4'>Communications</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_5' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_5'>Customer Service</label>
+	                	</div>	                	
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_6' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_6'>eCommerce</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_7' onclick="setAnswer(26, N, 5);" /> 
+	                		<label for='question26_7'>Finance</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_8' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_8'>HR</label>
+	                	</div>	                	
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_9' onclick="setAnswer(26, G, 5);" /> 
+	                		<label for='question26_9'>IT</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_10' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_10'>Marketing</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_11' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_11'>Merchandising</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_12' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_12'>Operations</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_13' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_13'>Product</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_14' onclick="setAnswer(26, N, 5);" /> 
+	                		<label for='question26_14'>Research</label>	                	
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question26' id='question26_15' onclick="setAnswer(26, S, 5);" /> 
+	                		<label for='question26_15'>Sales</label>	                	
+	                	</div>	                	
+	                	<input type='radio' style='display: none;' name='question26' id='question26_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div>     
+            
+            <div class="question-wrapper set9">
+            <div class="statement">
+            	In high school were you most likely to be in…?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question27' id='question27_1' onclick="setAnswer(27, N, 5);" /> 
+	                		<label for='question27_1'>Math club</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question27' id='question27_2' onclick="setAnswer(27, G, 5);" /> 
+	                		<label for='question27_2'>Computer club</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question27' id='question27_3' onclick="setAnswer(27, S, 5);" /> 
+	                		<label for='question27_3'>Student council</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question27' id='question27_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div>         
+
+            <div class="question-wrapper set10">
+            <div class="statement">
+            	On a Thursday night are you most likely to be…?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question28' id='question28_1' onclick="setAnswer(28, G, 5);" /> 
+	                		<label for='question28_1'>Building a robot</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question28' id='question28_2' onclick="setAnswer(28, N, 5);" /> 
+	                		<label for='question28_2'>Solving a puzzle</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question28' id='question28_3' onclick="setAnswer(28, S, 5);" /> 
+	                		<label for='question28_3'>Talking on the phone with friends</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question28' id='question28_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div>         
+            
+            <div class="question-wrapper set11">
+            <div class="statement">
+            	Which animal would you most like to be?
+            </div>
+        	<div class="row decision">
+	                <div class='multi_choice'>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question29' id='question29_1' onclick="setAnswer(29, G, 5);" /> 
+	                		<label for='question29_1'>Beaver</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question29' id='question29_2' onclick="setAnswer(29, N, 5);" /> 
+	                		<label for='question29_2'>Eagle</label>
+	                	</div>
+	                	<div class='multi_choice_answer_wrap'>
+	                		<input type='radio' class='multi_choice_radio' name='question29' id='question29_3' onclick="setAnswer(29, S, 5);" /> 
+	                		<label for='question29_3'>Fox</label>
+	                	</div>
+	                	<input type='radio' style='display: none;' name='question29' id='question29_none' checked='checked' value='No Answer Provided' />
+	                </div>
+	            </div>  
+            </div>                         
+                                
+        &nbsp;
+        
+        <div class="row quiz-submit-wrapper">
+            <div class="col-md-12">
+            	<div class="submit_wrapper setprev">
+                    <button class="btn btn-action btn-lg" id="prevbut" type="button">
+                        <span>PREVIOUS&nbsp;</span></button>
+                </div>
+                <div class="submit_wrapper setnext">
+                    <button class="btn btn-action btn-lg" id="nextbut" type="button">
+                        <span>NEXT&nbsp;</span></button>
+                </div>
+                <div class="submit_wrapper setres">
+                    <button class="btn btn-action btn-lg" id="submbut" type="button">
+                        <span>RESULTS&nbsp;</span></button>
+                </div>
+            </div>
+        </div>
+        
+        </form>
+
+	</div>
+
+<script src="footer-vendors-v1.js?v=1"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script src="gns-quiz.js"></script>
+
+</body>
+</html>

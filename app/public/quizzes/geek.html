@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:image" content="Quiz_Geek.png" />
+<title>GNS Quiz Results</title>
+<!-- <link rel="stylesheet" href="vendors-v1.css"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/bootstrap-social.css">
+<link rel="stylesheet" href="https://lipis.github.io/bootstrap-social/assets/css/font-awesome.css">
+<link rel="stylesheet" href="gns-quiz.css">
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<style>
+.ct-series-a .ct-slice-donut {
+  /* give the donut slice a custom colour */
+  stroke: #7AC4C4;
+}
+.ct-series-b .ct-slice-donut {
+  /* give the donut slice a custom colour */
+  stroke: gray;
+}
+.ct-chart {
+	padding: auto;
+    margin: auto;
+    width: 130px;
+    height: 130px;
+}
+</style>
+
+</head>
+<body>
+
+ <div class="col-md-12 gns-quiz-results">
+ 
+	<div class="gns-result-header" >
+		<span class="gns-hero-s"><img src="Quiz_Geek.png" alt="Geek Image" ></span>
+		<p style="margin-bottom: 0px;">You are skilled at and passionate about technology, and you bring a level of expertise to the table that will help others understand what can and can’t be done when it comes to customer data and interactions.</p>
+	</div>
+	
+	<div style="padding-top: 12px; font-size: 15px;">
+	Despite your designation, you still showed flashes across the board. Take a look at your personal ranking for each of Geek, Nerd, and Suit below.
+	</div>
+
+  <div class="row" style="margin: auto; padding-bottom: 40px;" >
+  	<div class="chart col-xs-12 col-sm-4" style="height:160px; margin-bottom: 40px;">
+		<div class="ct-fill-donut-label" style="position: relative; top:0px; text-align: center;">
+			<h3 style="font-size: 1.5em; font-weight:300">GEEK</h3>
+			</div>
+		<div class="ct-fill-donut-label" style="position: relative; top:36px; text-align: center;">
+			<h3 id="geek-score" style="font-size: 1.7em; font-family: FjallaOne">0%</h3>
+		</div>
+		<div class="ct-chart" id="geek-chart" style="position: relative; top:-60px;"></div>
+	</div>
+	<div class="chart col-xs-12 col-sm-4" style="height:160px; margin-bottom: 40px;">
+		<div class="ct-fill-donut-label" style="position: relative; top:0px; text-align: center;">
+			<h3 style="font-size: 1.5em; font-weight:300">NERD</h3>
+			</div>
+		<div class="ct-fill-donut-label" style="position: relative; top:36px; text-align: center;">
+			<h3 id="nerd-score" style="font-size: 1.7em; font-family: FjallaOne">0%</h3>
+		</div>
+		<div class="ct-chart" id="nerd-chart" style="position: relative; top:-60px;"></div>
+	</div>
+  	<div class="chart col-xs-12 col-sm-4" style="height:160px; margin-bottom: 40px;">	
+		<div class="ct-fill-donut-label" style="position: relative; top:0px; text-align: center;">
+			<h3 style="font-size: 1.5em; font-weight:300">SUIT</h3>
+			</div>
+		<div class="ct-fill-donut-label" style="position: relative; top:36px; text-align: center;">
+			<h3 id="suit-score" style="font-size: 1.7em; font-family: FjallaOne">0%</h3>
+		</div>
+		<div class="ct-chart" id="suit-chart" style="position: relative; top:-60px;"></div>
+	</div>
+  </div>	
+	
+	<!-- Share to LinkedIn -->
+	<a class="btn btn-social-icon btn-linkedin" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-linkedin']); target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://geeknerdsuit.flywheelsites.com/geek/&title=What%20Are%20You?&summary=Take%20the%20quiz%20to%20find%20out%20what%20you%20are.&source=geeknerdsuit.flywheelsites.com">
+		<span class="fa fa-linkedin"></span>
+	</a>
+
+</div>
+
+<script src="footer-vendors-v1.js?v=1"></script>
+<script src="gns-results.js"></script>
+
+</body>
+</html>
