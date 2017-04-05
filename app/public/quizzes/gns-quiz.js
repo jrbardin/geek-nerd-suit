@@ -26,6 +26,12 @@ $j( document ).ready(function() {
 
 $j(document).on('click', '#nextbut', function () {
 
+	// verify all questions in current set have been answered
+	if( !isSetComplete(CurrentSet) ){
+		alert('All questions must be answered before continuing.');
+		return false;
+	}
+
 	CurrentSet++;
 
 	$j('.set' + (CurrentSet-1)).fadeOut(200, function() {
@@ -149,9 +155,24 @@ $j(document).on('click', '#submbut', function () {
 
 });
 
+function isSetComplete(setIndex){
+	// ranking questions
+	var rank_questions = $j('.set' + setIndex + ' .btn-group' );
+	for (i=0; i < rank_questions.length; i++){
+		if( $j(rank_questions[i]).find('.active').length == 0 ){
+			return false;
+		}
+  	}
+  	// multiple choice questions
+	var multichoice_questions = $j('.set' + setIndex + ' .multi_choice' );
+	for (i=0; i < multichoice_questions.length; i++){
+		if( $j(multichoice_questions[i]).find('input:checked').length == 0 ){
+			return false;
+		}
+  	}
+	return true;
+}
+
 function setAnswer(question, cat, newval) {
-//     $j('#a' + index).val(newval);
-//     answers[index-1, cat] = newval;
 	answers[question-1][cat] = newval;
-//     alert('q: ' + index + ', cat: ' + cat + ', val: ' + newval);
 }
