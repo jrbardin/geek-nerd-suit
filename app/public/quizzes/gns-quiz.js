@@ -28,7 +28,8 @@ $j(document).on('click', '#nextbut', function () {
 
 	// verify all questions in current set have been answered
 	if( !isSetComplete(CurrentSet) ){
-		alert('All questions must be answered before continuing.');
+		$j('.missing_response_error').show();
+		$j('.missing_response_error').fadeOut(4000);
 		return false;
 	}
 
@@ -102,6 +103,13 @@ $j(document).on('click', '#prevbut', function () {
 });
 
 $j(document).on('click', '#submbut', function () {
+
+	// verify all questions in current set have been answered
+	if( !isSetComplete(CurrentSet) ){
+		$j('.missing_response_error').show();
+		$j('.missing_response_error').fadeOut(4000);
+		return false;
+	}
 
     var sliderWidth = $j('.progress').width();
 

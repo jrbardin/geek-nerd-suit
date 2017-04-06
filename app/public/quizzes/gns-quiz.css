@@ -467,14 +467,14 @@ GNS QUIZ
 .gns-quiz #quiz-form .setprev,
 .gns-quiz #quiz-form .setnext,
 .gns-quiz #quiz-form .setres {
-  padding-top: 20px;
+  padding-top: 12px;
   text-align: center;
 }
 .gns-quiz #quiz-form .setprev .btn,
 .gns-quiz #quiz-form .setnext .btn,
 .gns-quiz #quiz-form .setres .btn {
   min-width: 60%;
-  margin: 10px 0 25px 0;
+  margin: 10px 0 10px 0;
   padding: 15px 15px 14px 15px;
 }
 @media (min-width: 600px) {
@@ -502,11 +502,13 @@ GNS QUIZ
 .gns-quiz #quiz-form .setres {
   display: none;
 }
-.gns-quiz .test-social-bar {
-  margin-bottom: 10px;
-  overflow: hidden;
-}
 
+.missing_response_error {
+	color: red;
+	display: none;
+	text-align: center;
+	margin: 10px 0 10px 0;
+}
 
 /************************
 GNS QUIZ RESULTS
