@@ -8,16 +8,21 @@ var CurrentSet = 1;
 const G = 0;
 const N = 1;
 const S = 2;
-const G_MAX_PTS = 75
-const N_MAX_PTS = 75;
-const S_MAX_PTS = 75;
+// Define maximum possible points for Geek, Nerd, and Suit,
+//	excluding the tiebreaker question
+const G_MAX_PTS = 70
+const N_MAX_PTS = 70;
+const S_MAX_PTS = 70;
+// Question 26 (functional areas) is the tiebreaker question
+const TIEBREAKER_INDEX = 25; // answer array is zero-based
+const TIEBREAKER_PTS = 1; // in case of tiebreaker, we give winner one additional point
 // answer array
-var answers = new Array(NUM_QUESTIONS);
+var answer_points = new Array(NUM_QUESTIONS);
 for (i=0; i < NUM_QUESTIONS; i++) {
-	answers[i] = new Array(3);
-	answers[i][G] = 0;
-	answers[i][N] = 0;
-	answers[i][S] = 0;		
+	answer_points[i] = new Array(3);
+	answer_points[i][G] = 0;
+	answer_points[i][N] = 0;
+	answer_points[i][S] = 0;
 }
 
 $j( document ).ready(function() {
@@ -134,9 +139,11 @@ $j(document).on('click', '#submbut', function () {
 	var suitScore = 0;
 	// tally points
 	for (q = 0; q < NUM_QUESTIONS; q++) { 
-		geekPoints = geekPoints + answers[q][G];
-		nerdPoints = nerdPoints + answers[q][N];
-		suitPoints = suitPoints + answers[q][S];
+		if (q != TIEBREAKER_INDEX){
+			geekPoints = geekPoints + answer_points[q][G];
+			nerdPoints = nerdPoints + answer_points[q][N];
+			suitPoints = suitPoints + answer_points[q][S];
+		}
 	}
 	geekScore = Math.round(100 * geekPoints / G_MAX_PTS);
 	nerdScore = Math.round(100 * nerdPoints / N_MAX_PTS);
@@ -145,14 +152,26 @@ $j(document).on('click', '#submbut', function () {
 // 	alert('Geek score: ' + geekScore + ', Nerd score: ' + nerdScore + ', Suit score: ' + suitScore);
 	
 	var gns_result;
-	if (geekScore == Math.max(geekScore, nerdScore, suitScore)){
+	if (geekScore > Math.max(nerdScore, suitScore) || 
+		(geekScore == Math.max(nerdScore, suitScore) && answer_points[TIEBREAKER_INDEX][G] > 0) ) {
 		gns_result = "geek";
+		if (geekScore == Math.max(nerdScore, suitScore) ) {
+			geekScore = geekScore + TIEBREAKER_PTS;
+		}
 	}
-	else if (nerdScore == Math.max(geekScore, nerdScore, suitScore)){
+	else if (nerdScore > Math.max(geekScore, suitScore) || 
+		(nerdScore == Math.max(geekScore, suitScore) && answer_points[TIEBREAKER_INDEX][N] > 0) ) {
 		gns_result = "nerd";
+		if (nerdScore == Math.max(geekScore, suitScore) ) {
+			nerdScore = nerdScore + TIEBREAKER_PTS;
+		}
 	}
-	else if (suitScore == Math.max(geekScore, nerdScore, suitScore)){
+	else if (suitScore > Math.max(geekScore, nerdScore) || 
+		(suitScore == Math.max(geekScore, nerdScore) && answer_points[TIEBREAKER_INDEX][S] > 0) ) {
 		gns_result = "suit";
+		if (suitScore == Math.max(geekScore, nerdScore) ) {
+			suitScore = suitScore + TIEBREAKER_PTS;
+		}
 	}
 	
 	var result_url;
@@ -182,5 +201,5 @@ function isSetComplete(setIndex){
 }
 
 function setAnswer(question, cat, newval) {
-	answers[question-1][cat] = newval;
+	answer_points[question-1][cat] = newval;
 }
