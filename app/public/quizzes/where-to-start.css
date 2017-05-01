@@ -200,28 +200,32 @@ blockquote footer {
 
 
 /* figure out sizing for width of results div and margin/padding */
-.quiz {
+.quiz, .result-summary, .result-detail {
 	float: none;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 25px;
 }
 @media (max-width: 479px) {
-.quiz {
+.quiz, .result-summary, .result-detail {
 	width: 100%;
 	max-width: 100%;
 	}
 }
 @media (min-width: 480px) {
-.quiz {
-	width: 75%;
+.quiz, .result-summary, .result-detail {
+	width: 80%;
 	}
 }
 
-.quiz .header {
+.quiz .header, 
+.result-summary .header {
 	vertical-align: text-middle;
+	background-color: #eee;
+	color: #000;
 }
-.quiz .header h1 {
+.quiz .header h1,
+.result-summary .header h1 {
 	#font-family: 'FjallaOne';
 	font-size: 1.2em;
 	padding-bottom: 4px;
@@ -233,34 +237,22 @@ blockquote footer {
 	font-size: 12px;
 	font-weight: normal;
 }
+.result-summary .header th {
+	vertical-align: text-top;
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
 .quiz .header th.narrow {
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.quiz td {
+.quiz td, .result-summary td {
 	font-size: 12px;
 	font-family: Helvetica;
 	padding: 9px;
-}
-
-/* figure out sizing for width of results div and margin/padding */
-.quiz.summary {
-	float: none;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 25px;
-}
-@media (max-width: 479px) {
-.quiz.summary{
-	width: 100%;
-	max-width: 100%;
-	}
-}
-@media (min-width: 480px) {
-.quiz.summary{
-	width: 90%;
-	}
 }
 
 .quiz #quiz-form .question-wrapper {
@@ -309,28 +301,39 @@ blockquote footer {
   display: none;
 }
 
+/* Quiz Summary & Results*/
 
-.quiz #summary-form .setdetail {
+.result-summary, .result-detail {
+  display: none;
+}
+
+.result-summary .setdetail,
+.result-detail .setsummary {
   padding-top: 20px;
   text-align: center;
 }
-.quiz #summary-form .setdetail .btn {
+.result-summary .btn,
+.result-detail .btn {
   min-width: 60%;
   margin: 10px 0 25px 0;
   padding: 15px 15px 14px 15px;
 }
 @media (min-width: 600px) {
-  .quiz #summary-form .setdetail .btn {
+  .result-summary .btn, .result-detail .btn {
     min-width: 25%;
     padding: 16px 15px 17px 15px;
   }
 }
-.quiz #summary-form .setdetail .btn span {
+.result-summary .btn span, .result-detail .btn span {
   font-size: 1.2em;
   font-weight: 500;
 }
 @media (min-width: 600px) {
-  .quiz #summary-form .setdetail .btn span {
+  .result-summary .btn span, .result-detail .btn span {
     font-size: 1.4em;
   }
+}
+
+#summary-table-container {
+ padding-top: 24px;
 }

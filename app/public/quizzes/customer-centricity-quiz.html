@@ -15,448 +15,495 @@
 
 <body>
 
-<h1 style="font-size: 36px;"><center>Customer Centricity Quiz</center></h1>
+ <!-- Quiz Questions -->
+ <div class="quiz">
 
-<div class="quiz">
+  <h1 style="font-size: 36px;"><center>Customer Centricity Quiz</center></h1>
 
-<form method="POST" action="" accept-charset="UTF-8" id="quiz-form">
+  <form method="POST" action="" accept-charset="UTF-8" id="quiz-form">
 
-  	<div id="business-challenge" class="question-wrapper set1">
+  <div id="business-challenge" class="question-wrapper set1">
 	
-	<img src="./BusinessPOV.png" alt="Business POV Image" width=100%>
-	<br>
-	<span style="font-size: 14px;">
-	The following statements reflect the internal challenges that companies may face during their customer centricity journey. When thinking about your business, rate how well each statement describes your business today.
-	</span>
-		  	
-	<table class="table">
-	<thead>
-	 <tr class="header">
-	  <th class="col-md-2"><h1>CHAPTER</h1></th>
-	  <th class="col-md-8">
-	  	<h1>BUSINESS CHALLENGE</h1>	  	
-	  	<span>Rate the following statements on a scale of 0-5.</span><br>
-	  	<span style="font-size: 0.9em;">0-This does not describe us at all, 
-	  	5-This describes us very well</span>
-	  </th>
-	  <th class="col-md-2"><h1>YOUR SCORE</h1></th>
-	 </tr>
-	</thead>	 
-	<tr>
-	  <td>1</td>
-	  <td>Nobody will fund anything because they don’t believe it will work</td>
-	  <td><select name="cust_score_chp_1">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
+	 <img src="./BusinessPOV.png" alt="Business POV Image" width=100%>
+	 <br>
+	 <span style="font-size: 14px;">
+	 The following statements reflect the internal challenges that companies may face during their customer centricity journey. When thinking about your business, rate how well each statement describes your business today.
+	 </span>
+			
+	 <table class="table">
+	 <thead>
+	  <tr class="header">
+	   <th class="col-md-2"><h1>CHAPTER</h1></th>
+	   <th class="col-md-8">
+		 <h1>BUSINESS CHALLENGE</h1>	  	
+		 <span>Rate the following statements on a scale of 0-5.</span><br>
+		 <span style="font-size: 0.9em;">0-This does not describe us at all, 
+		 5-This describes us very well</span>
+	   </th>
+	   <th class="col-md-2"><h1>YOUR SCORE</h1></th>
+	  </tr>
+	 </thead>	 
 	 <tr>
-	  <td>2</td>
-	  <td>Our systems aren’t integrated, so we
-	  can’t track customers across channels</td>
-	  <td><select name="cust_score_chp_2">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>3</td>
-	  <td>We don’t have a formal plan for what customer data to collect</td>
-	  <td><select name="cust_score_chp_3">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>4</td>
-	  <td>We have so much data, but aren’t doing anything useful with it</td>
-	  <td><select name="cust_score_chp_4">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>5</td>
-	  <td>Our team doesn’t consider customer
-	  insight when making decisions</td>
-	  <td><select name="cust_score_chp_5">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>6</td>
-	  <td>Our executives aren’t in touch with our customers</td>
-	  <td><select name="cust_score_chp_6">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>7</td>
-	  <td>We have too many priorities, and don’t know where to focus</td>
-	  <td><select name="cust_score_chp_7">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>8</td>
-	  <td>We rely too heavily on a single source of customer insight</td>
-	  <td><select name="cust_score_chp_8">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>9</td>
-	  <td>We know customers in aggregate, but not as individuals</td>
-	  <td><select name="cust_score_chp_9">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>10</td>
-	  <td>We focus on acquisition, but not retention</td>
-	  <td><select name="cust_score_chp_10">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>11</td>
-	  <td>We aren’t managing the frequency of
-	  communication across all channels</td>
-	  <td><select name="cust_score_chp_11">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>12</td>
-	  <td>We don’t have a test and learn
-	  program that ends up making a difference</td>
-	  <td><select name="cust_score_chp_12">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>13</td>
-	  <td>Our personalization efforts aren’t very good</td>
-	  <td><select name="cust_score_chp_13">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>14</td>
-	  <td>We aren’t managing the end-to-end customer experience</td>
-	  <td><select name="cust_score_chp_14">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>15</td>
-	  <td>We don’t have a good way to measure
-	  how loyal our customers are</td>
-	  <td><select name="cust_score_chp_15">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	</table>
+	   <td>1</td>
+	   <td>Nobody will fund anything because they don’t believe it will work</td>
+	   <td><select name="biz_score_chp_1" onchange="setChapterScore(1, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>2</td>
+	   <td>Our systems aren’t integrated, so we
+	   can’t track customers across channels</td>
+	   <td><select name="biz_score_chp_2" onchange="setChapterScore(2, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>3</td>
+	   <td>We don’t have a formal plan for what customer data to collect</td>
+	   <td><select name="biz_score_chp_3" onchange="setChapterScore(3, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>4</td>
+	   <td>We have so much data, but aren’t doing anything useful with it</td>
+	   <td><select name="biz_score_chp_4" onchange="setChapterScore(4, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>5</td>
+	   <td>Our team doesn’t consider customer
+	   insight when making decisions</td>
+	   <td><select name="biz_score_chp_5" onchange="setChapterScore(5, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>6</td>
+	   <td>Our executives aren’t in touch with our customers</td>
+	   <td><select name="biz_score_chp_6" onchange="setChapterScore(6, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>7</td>
+	   <td>We have too many priorities, and don’t know where to focus</td>
+	   <td><select name="biz_score_chp_7" onchange="setChapterScore(7, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>8</td>
+	   <td>We rely too heavily on a single source of customer insight</td>
+	   <td><select name="biz_score_chp_8" onchange="setChapterScore(8, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>9</td>
+	   <td>We know customers in aggregate, but not as individuals</td>
+	   <td><select name="biz_score_chp_9" onchange="setChapterScore(9, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>10</td>
+	   <td>We focus on acquisition, but not retention</td>
+	   <td><select name="biz_score_chp_10" onchange="setChapterScore(10, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>11</td>
+	   <td>We aren’t managing the frequency of
+	   communication across all channels</td>
+	   <td><select name="biz_score_chp_11" onchange="setChapterScore(11, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>12</td>
+	   <td>We don’t have a test and learn
+	   program that ends up making a difference</td>
+	   <td><select name="biz_score_chp_12" onchange="setChapterScore(12, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>13</td>
+	   <td>Our personalization efforts aren’t very good</td>
+	   <td><select name="biz_score_chp_13" onchange="setChapterScore(13, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>14</td>
+	   <td>We aren’t managing the end-to-end customer experience</td>
+	   <td><select name="biz_score_chp_14" onchange="setChapterScore(14, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>15</td>
+	   <td>We don’t have a good way to measure
+	   how loyal our customers are</td>
+	   <td><select name="biz_score_chp_15" onchange="setChapterScore(15, BIZ_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	 </table>
 	
-  </div>
+   </div>
   
-  <div id="customer-challenge" class="question-wrapper set2">
+   <div id="customer-challenge" class="question-wrapper set2">
 	
-	<img src="./CustomerPOV.png" alt="Business POV Image" width=100%>
-	<br>
-	<span style="font-size: 14px;">
-	The statements below relate to challenges that customers may be experiencing with your brand. Thinking about those customers, rate how well each statement describes how your customers likely feel.
-	</span>
-		  	
-	<table class="table">
-	<thead>
-	 <tr class="header">
-	  <th class="col-md-2"><h1>CHAPTER</h1></th>
-	  <th class="col-md-8">
-	  	<h1>CUSTOMER CHALLENGE</h1>	  	
-	  	<span>Rate the following statements on a scale of 0-5.</span><br>
-	  	<span style="font-size: 0.9em;">0-Customers don't feel this way at all, 
-	  	5-Customers strongly feel this way</span>
-	  </th>
-	  <th class="col-md-2"><h1>YOUR SCORE</h1></th>
-	 </tr>
-	</thead>	 
-	<tr>
-	  <td>1</td>
-	  <td>This company’s systems are outdated and frustrating</td>
-	  <td><select name="cust_score_chp_1">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
+	 <img src="./CustomerPOV.png" alt="Business POV Image" width=100%>
+	 <br>
+	 <span style="font-size: 14px;">
+	 The statements below relate to challenges that customers may be experiencing with your brand. Thinking about those customers, rate how well each statement describes how your customers likely feel.
+	 </span>
+			
+	 <table class="table">
+	 <thead>
+	  <tr class="header">
+	   <th class="col-md-2"><h1>CHAPTER</h1></th>
+	   <th class="col-md-8">
+		 <h1>CUSTOMER CHALLENGE</h1>	  	
+		 <span>Rate the following statements on a scale of 0-5.</span><br>
+		 <span style="font-size: 0.9em;">0-Customers don't feel this way at all, 
+		 5-Customers strongly feel this way</span>
+	   </th>
+	   <th class="col-md-2"><h1>YOUR SCORE</h1></th>
+	  </tr>
+	 </thead>	 
 	 <tr>
-	  <td>2</td>
-	  <td>This company doesn’t seem to remember me</td>
-	  <td><select name="cust_score_chp_2">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>3</td>
-	  <td>This company seems to ask me for random or irrelevant information</td>
-	  <td><select name="cust_score_chp_3">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>4</td>
-	  <td>This company knows a lot about me, but doesn’t seem to use any of it</td>
-	  <td><select name="cust_score_chp_4">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>5</td>
-	  <td>I think this company makes decisions without considering my personal interests</td>
-	  <td><select name="cust_score_chp_5">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>6</td>
-	  <td>It seems like the leaders running this business don’t know who I am or what I value</td>
-	  <td><select name="cust_score_chp_6">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>7</td>
-	  <td>It seems like this company is a bit all over the place when it comes to priorities</td>
-	  <td><select name="cust_score_chp_7">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>8</td>
-	  <td>This company seems to know one thing about me, and one thing only</td>
-	  <td><select name="cust_score_chp_8">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>9</td>
-	  <td>I seem to just get lumped in with other customers, rather than being seen as an individual</td>
-	  <td><select name="cust_score_chp_9">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>10</td>
-	  <td>This company spent a lot of time trying to get me to make a purchase, but I haven’t heard from them since</td>
-	  <td><select name="cust_score_chp_10">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>11</td>
-	  <td>I seem to be getting bombarded with marketing that has no rhyme or reason to it</td>
-	  <td><select name="cust_score_chp_11">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>12</td>
-	  <td>This company seems to keep doing the same things over and over again, and they don’t work</td>
-	  <td><select name="cust_score_chp_12">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>13</td>
-	  <td>This company hardly personalizes anything, and gets it wrong when they try</td>
-	  <td><select name="cust_score_chp_13">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>14</td>
-	  <td>This company is inconsistent in how it treats me across channels or over time</td>
-	  <td><select name="cust_score_chp_14">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	 <tr>
-	  <td>15</td>
-	  <td>I feel like I’m not being recognized or rewarded for my loyalty</td>
-	  <td><select name="cust_score_chp_15">
-	  	<option value="0">0</option>
-	  	<option value="1">1</option>
-	  	<option value="2">2</option>
-	  	<option value="3">3</option>
-	  	<option value="4">4</option>
-	  	<option value="5">5</option>
-	  </td>
-	 </tr>
-	</table>
+	   <td>1</td>
+	   <td>This company’s systems are outdated and frustrating</td>
+	   <td><select name="cust_score_chp_1" onchange="setChapterScore(1, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>2</td>
+	   <td>This company doesn’t seem to remember me</td>
+	   <td><select name="cust_score_chp_2" onchange="setChapterScore(2, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>3</td>
+	   <td>This company seems to ask me for random or irrelevant information</td>
+	   <td><select name="cust_score_chp_3" onchange="setChapterScore(3, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>4</td>
+	   <td>This company knows a lot about me, but doesn’t seem to use any of it</td>
+	   <td><select name="cust_score_chp_4" onchange="setChapterScore(4, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>5</td>
+	   <td>I think this company makes decisions without considering my personal interests</td>
+	   <td><select name="cust_score_chp_5" onchange="setChapterScore(5, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>6</td>
+	   <td>It seems like the leaders running this business don’t know who I am or what I value</td>
+	   <td><select name="cust_score_chp_6" onchange="setChapterScore(6, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>7</td>
+	   <td>It seems like this company is a bit all over the place when it comes to priorities</td>
+	   <td><select name="cust_score_chp_7" onchange="setChapterScore(7, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>8</td>
+	   <td>This company seems to know one thing about me, and one thing only</td>
+	   <td><select name="cust_score_chp_8" onchange="setChapterScore(8, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>9</td>
+	   <td>I seem to just get lumped in with other customers, rather than being seen as an individual</td>
+	   <td><select name="cust_score_chp_9" onchange="setChapterScore(9, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>10</td>
+	   <td>This company spent a lot of time trying to get me to make a purchase, but I haven’t heard from them since</td>
+	   <td><select name="cust_score_chp_10" onchange="setChapterScore(10, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>11</td>
+	   <td>I seem to be getting bombarded with marketing that has no rhyme or reason to it</td>
+	   <td><select name="cust_score_chp_11" onchange="setChapterScore(11, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>12</td>
+	   <td>This company seems to keep doing the same things over and over again, and they don’t work</td>
+	   <td><select name="cust_score_chp_12" onchange="setChapterScore(12, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>13</td>
+	   <td>This company hardly personalizes anything, and gets it wrong when they try</td>
+	   <td><select name="cust_score_chp_13" onchange="setChapterScore(13, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>14</td>
+	   <td>This company is inconsistent in how it treats me across channels or over time</td>
+	   <td><select name="cust_score_chp_14" onchange="setChapterScore(14, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>15</td>
+	   <td>I feel like I’m not being recognized or rewarded for my loyalty</td>
+	   <td><select name="cust_score_chp_15" onchange="setChapterScore(15, CUSTOMER_CHALLENGE, this.value)">
+		 <option value="0">0</option>
+		 <option value="1">1</option>
+		 <option value="2">2</option>
+		 <option value="3">3</option>
+		 <option value="4">4</option>
+		 <option value="5">5</option></select>
+	   </td>
+	  </tr>
+	 </table>
 	
-  </div>
+   </div>
   
-        <div class="row quiz-submit-wrapper">
-            <div class="col-md-12">
-				<div class="submit_wrapper setprev">
-                    <button class="btn btn-action btn-lg" id="prevbut" type="button">
-                        <span>PREVIOUS&nbsp;</span></button>
-                </div>
-                <div class="submit_wrapper setnext">
-                    <button class="btn btn-action btn-lg" id="nextbut" type="button">
-                        <span>NEXT&nbsp;</span></button>
-                </div>
-                <div class="submit_wrapper setres">
-                    <button class="btn btn-action btn-lg" id="submbut" type="button">
-                        <span>SUBMIT&nbsp;</span></button>
-                </div>
-            </div>
-        </div>
+   <div class="row quiz-submit-wrapper">
+	   <div class="col-md-12">
+		   <div class="submit_wrapper setprev">
+			   <button class="btn btn-action btn-lg" id="prevbut" type="button">
+				   <span>PREVIOUS&nbsp;</span></button>
+		   </div>
+		   <div class="submit_wrapper setnext">
+			   <button class="btn btn-action btn-lg" id="nextbut" type="button">
+				   <span>NEXT&nbsp;</span></button>
+		   </div>
+		   <div class="submit_wrapper setres">
+			   <button class="btn btn-action btn-lg" id="goto-summary" type="button">
+				   <span>SUBMIT&nbsp;</span></button>
+		   </div>
+	   </div>
+   </div>
 	
-	</form>
+  </form>
 
-</div>
+ </div>
 
+ <!-- Quiz Summary -->
+ <div class="result-summary" width="90%">
+
+  <h1 style="font-size: 36px;"><center>Where To Start</center></h1>
+
+  <span style="font-size: 0.75em;">
+  <b>10: NON-NEGOTIABLES</b> - You and your customers are both suffering, so it’s time to make some serious investments.
+  <br><b>8-9: BURNING HOT</b> - These items really need to be on your short list of problems to tackle.
+  <br><b>6-7: NICE-TO-HAVES</b> - If you can summon the resources and don’t have more pressing concerns, add these to your list of priorities.
+  <br><b>1 - 5: BACKBURNER</b> - These items may become important someday, but you can probably put them on ice for now.
+  <br><b>0: NOTHING TO DO</b> - Wow! Either you wrote down the wrong number, or you legitimately have nothing to worry about.
+  </span>
+
+  <div id="summary-table-container"></div>
+
+  <h1>CUSTOMER HOT BUTTONS</h1>
+  <span style="font-size: 14px;">
+   Regardless of your overall score, keep in mind that these are the things that your Customers will want you to fix first.
+  </span>
+  <div style="width:50%" id="hotbuttons-table-container"></div>
+	
+  <div class="col-md-12">
+   <div class="submit_wrapper setdetail">
+	<button class="btn btn-action btn-lg" id="goto-detail" type="button">
+	<span>DETAIL&nbsp;</span></button>
+   </div>
+  </div>
+
+ </div>
+
+ <!-- Quiz Result Detail -->
+ <div class="result-detail">
+
+  <h1 style="font-size: 36px;"><center>Customer Centricity Quiz Results</center></h1>
+
+  <div id="detail-table-container"></div>
+   
+  <div class="col-md-12">
+   <div class="submit_wrapper setsummary">
+	   <button class="btn btn-action btn-lg" id="back-to-summary" type="button">
+		   <span>BACK TO SUMMARY&nbsp;</span></button>
+   </div>
+  </div>
+	
+ </div>
+  
 <script src="footer-vendors-v1.js?v=1"></script>
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 <script src="where-to-start.js"></script>
