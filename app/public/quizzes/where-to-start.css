@@ -209,7 +209,6 @@ blockquote footer {
 @media (max-width: 479px) {
 .quiz, .result-summary, .result-detail {
 	width: 100%;
-	max-width: 100%;
 	}
 }
 @media (min-width: 480px) {
@@ -218,17 +217,24 @@ blockquote footer {
 	}
 }
 
+.quiz .table {
+	margin-top: 12px;
+}
+
 .quiz .header, 
-.result-summary .header {
+.result-summary .header,
+.result-detail .header {
 	vertical-align: text-middle;
 	background-color: #eee;
 	color: #000;
 }
 .quiz .header h1,
-.result-summary .header h1 {
-	#font-family: 'FjallaOne';
+.result-summary .header h1,
+.result-detail .header h1 {
 	font-size: 1.2em;
+	padding-top: 4px;
 	padding-bottom: 4px;
+	margin-top: 4px;
 	margin-bottom: 0px;
 	font-weight: bold;	
 }
@@ -237,19 +243,23 @@ blockquote footer {
 	font-size: 12px;
 	font-weight: normal;
 }
-.result-summary .header th {
+.result-summary .header th,
+.result-detail .header th {
 	vertical-align: text-top;
-	font-size: 16px;
+	font-size: 15px;
 	font-weight: bold;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 .quiz .header th.narrow {
 	font-size: 12px;
 	font-weight: bold;
 }
-
-.quiz td, .result-summary td {
+.quiz td, 
+.result-summary td,
+.result-detail td {
 	font-size: 12px;
 	font-family: Helvetica;
 	padding: 9px;
@@ -303,7 +313,7 @@ blockquote footer {
 
 /* Quiz Summary & Results*/
 
-.result-summary, .result-detail {
+.result-summary, #customer-hotbuttons, .result-detail {
   display: none;
 }
 
@@ -334,6 +344,8 @@ blockquote footer {
   }
 }
 
-#summary-table-container {
- padding-top: 24px;
+#summary-table-container,
+#hotbuttons-table-container,
+#detail-table-container {
+ padding-top: 20px;
 }
